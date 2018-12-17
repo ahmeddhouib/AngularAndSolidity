@@ -1,0 +1,32 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Msg from contract to angular {{ messageFromContractToAngular }}!
+  </h1>
+
+</div>
+
+
+<h1>
+  My Message : {{ message }}!
+</h1>
+<div>
+  <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label>Modify Message</label>
+      <input type="text" id="newmessage" name="newmessage"
+             formControlName="newmessage" class="form-control" />
+      <p>
+        Value {{ registerForm.controls.newmessage.value }}
+      </p>
+    </div>
+    <div class="form-group">
+      <button class="btn btn-primary">Register</button>
+    </div>
+  </form>
+</div>
+<h1>{{state}}</h1>
+
+
+
+<router-outlet></router-outlet>
